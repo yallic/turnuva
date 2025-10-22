@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA 26 Turnuva Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚽ FIFA 26 Turnuva</h1>
+            <p class="subtitle">Arkadaşlar Arası Turnuva Takip Sistemi</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Maç Girişi -->
+            <section class="card match-entry">
+                <h2>Yeni Maç Girişi</h2>
+                <form id="matchForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="homePlayer">Ev Sahibi Oyuncu</label>
+                            <select id="homePlayer" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Fatih">Fatih</option>
+                                <option value="Oğuz">Oğuz</option>
+                                <option value="Abdullah">Abdullah</option>
+                                <option value="Bahadır">Bahadır</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="homeTeam">Ev Sahibi Takım</label>
+                            <select id="homeTeam" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Real Madrid">Real Madrid</option>
+                                <option value="Barcelona">Barcelona</option>
+                                <option value="Manchester City">Manchester City</option>
+                                <option value="Bayern Munich">Bayern Munich</option>
+                                <option value="PSG">PSG</option>
+                                <option value="Liverpool">Liverpool</option>
+                                <option value="Arsenal">Arsenal</option>
+                                <option value="Inter Milan">Inter Milan</option>
+                                <option value="AC Milan">AC Milan</option>
+                                <option value="Juventus">Juventus</option>
+                                <option value="Atletico Madrid">Atletico Madrid</option>
+                                <option value="Chelsea">Chelsea</option>
+                                <option value="Manchester United">Manchester United</option>
+                                <option value="Tottenham">Tottenham</option>
+                                <option value="Napoli">Napoli</option>
+                                <option value="Dortmund">Dortmund</option>
+                                <option value="Galatasaray">Galatasaray</option>
+                                <option value="Fenerbahçe">Fenerbahçe</option>
+                                <option value="Beşiktaş">Beşiktaş</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group score-input">
+                            <label for="homeScore">Skor</label>
+                            <input type="number" id="homeScore" min="0" max="99" required>
+                        </div>
+                    </div>
+
+                    <div class="vs-divider">VS</div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="awayPlayer">Deplasman Oyuncu</label>
+                            <select id="awayPlayer" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Fatih">Fatih</option>
+                                <option value="Oğuz">Oğuz</option>
+                                <option value="Abdullah">Abdullah</option>
+                                <option value="Bahadır">Bahadır</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="awayTeam">Deplasman Takım</label>
+                            <select id="awayTeam" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Real Madrid">Real Madrid</option>
+                                <option value="Barcelona">Barcelona</option>
+                                <option value="Manchester City">Manchester City</option>
+                                <option value="Bayern Munich">Bayern Munich</option>
+                                <option value="PSG">PSG</option>
+                                <option value="Liverpool">Liverpool</option>
+                                <option value="Arsenal">Arsenal</option>
+                                <option value="Inter Milan">Inter Milan</option>
+                                <option value="AC Milan">AC Milan</option>
+                                <option value="Juventus">Juventus</option>
+                                <option value="Atletico Madrid">Atletico Madrid</option>
+                                <option value="Chelsea">Chelsea</option>
+                                <option value="Manchester United">Manchester United</option>
+                                <option value="Tottenham">Tottenham</option>
+                                <option value="Napoli">Napoli</option>
+                                <option value="Dortmund">Dortmund</option>
+                                <option value="Galatasaray">Galatasaray</option>
+                                <option value="Fenerbahçe">Fenerbahçe</option>
+                                <option value="Beşiktaş">Beşiktaş</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group score-input">
+                            <label for="awayScore">Skor</label>
+                            <input type="number" id="awayScore" min="0" max="99" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Maç Ekle</button>
+                </form>
+            </section>
+
+            <!-- Puan Tablosu -->
+            <section class="card standings">
+                <h2>Puan Tablosu</h2>
+                <div class="table-wrapper">
+                    <table id="standingsTable">
+                        <thead>
+                            <tr>
+                                <th>Sıra</th>
+                                <th>Oyuncu</th>
+                                <th>O</th>
+                                <th>G</th>
+                                <th>B</th>
+                                <th>M</th>
+                                <th>A</th>
+                                <th>Y</th>
+                                <th>AV</th>
+                                <th class="points-col">P</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standingsBody">
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="legend">
+                    <small>O: Oynanan | G: Galibiyet | B: Beraberlik | M: Mağlubiyet | A: Attığı | Y: Yediği | AV: Averaj | P: Puan</small>
+                </div>
+            </section>
+
+            <!-- Maç Geçmişi -->
+            <section class="card match-history">
+                <h2>Maç Geçmişi</h2>
+                <div id="matchHistory">
+                    <!-- JavaScript ile doldurulacak -->
+                </div>
+            </section>
+
+            <!-- Gelecek Özellik: Fotoğraftan Maç Girişi -->
+            <section class="card photo-upload" style="display: none;">
+                <h2>Fotoğraftan Maç Girişi (Yakında)</h2>
+                <div class="upload-area">
+                    <input type="file" id="photoInput" accept="image/*" disabled>
+                    <label for="photoInput" class="upload-label">
+                        <span>📸 Fotoğraf Yükle</span>
+                    </label>
+                    <p class="upload-hint">Bu özellik yakında aktif olacak!</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>FIFA 26 Turnuva Takip Sistemi - 2025</p>
+            <button id="resetBtn" class="btn-danger">Tüm Verileri Sıfırla</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
